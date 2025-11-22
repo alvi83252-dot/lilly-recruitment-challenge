@@ -1,8 +1,4 @@
-# Lilly Technical Challenge Documentation Template
-
-*This documentation template serves as a place for you to discuss how you approached this challenge, any issues you faced & how you overcame them, or any other points that you feel would be relevant for the interviewers to know. The text in italics is here to guide you - feel free to remove it once you fill out each section!*
-
-***Not every section in this document is required. This is just a template to help get you started. Feel free to add or remove sections as you feel necessary.***
+# Lilly Technical Challenge - Documentation
 
 ## Approach
 *How did you approach this challenge? Did you work through the objectives in any particular order? If so, why? Did you utilize any external resources, such as tutorials, guides, or other materials?*
