@@ -25,7 +25,7 @@ import json
 app = FastAPI()
 
 app.add_middleware(
-    CORSMiddleware,
+     CORSMiddleware, # allows the front end and back end to communicate 
     allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
@@ -125,6 +125,22 @@ def delete_med(name: str = Form(...)):
     return {"error": "Medicine not found"}
 
 # Add your average function here
+@app.get("/average-price")
+def average_price():
+    """
+    Calculate the average price of all the medicines with valid numeric prices.
+    Returns:
+        dict: The average price rounded to 2 decimal places
+    """
+
+    with open('data.json') as meds:
+        data = json.load(meds)
+        # Filter out invalid prices 
+        prices = [med['price'] for med in data['medicines'] if isinstance(med.get('price'),(int, float))]
+        if not prices:
+            return {"average_price": "No Valid Prices Found"}
+        avg = sum(prices) / len(prices)
+    return {"average_prices": round(avg, 2)}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
