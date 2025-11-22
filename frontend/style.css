@@ -29,4 +29,177 @@ body {
     height: 30px;
 }
 
-/* ---- Your custom styles below ---- */
+/* ----My full responsive style for my web page that fits on all screen sizes---- */
+
+ /* grid container for all medicine cards */
+#medicinesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto; /* for large screeens */
+}
+
+/* medicine card appearance */
+.medicine-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 5px solid #4CAF50;
+    width: 100%;
+}
+
+/* hover animation over the medicines */
+.medicine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* medicine title */
+.medicine-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* medicine price details */
+.medicine-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* responsive adjustments */
+        /* phones */
+@media (max-width: 480px) {
+    #medicinesList {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .medicine-card {
+        padding: 16px;
+    }
+
+    .medicine-card h3 {
+        font-size: 20px;
+    }
+
+    .medicine-card p {
+        font-size: 16px;
+    }
+}
+        /* tablets */
+@media (min-width: 768px) {
+    #medicinesList {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+        /* desktops/large screens */
+@media (min-width: 1400px) {
+    #medicinesList {
+        grid-template-columns: repeat(300px, 1fr);
+        gap: 25px;
+    }
+
+    .medicine-card {
+        padding: 24px;
+    }
+}
+
+ /* highlight card if it contains invalid data */
+.warning-card {
+    border-left: 5px solid #FFcc00; /* highlight colour for issues */
+}
+
+ /* yellow warnign box inside cards  */
+.warning-box {
+    background: #fff3b0;
+    padding: 8px;
+    background: #fff3cd;
+    color: #856404;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-left: 4px solid #f39c12;
+}
+
+ /* form container card  */
+.form-section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+ /* form heading  */
+.form-section h2 {
+    margin-bottom: 15px;
+}
+
+/* text inputs  */
+.form-section input {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: calc(50% - 12px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button style  */
+.form-section button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* button hover style  */
+.form-section button:hover {
+    background-color: #45a049;
+}
+
+ /* input stacking on small screens  */
+@media (max-width: 600px) {
+    .form-section input {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}
+
+ /* delete button style  */
+.form-section button.delete-btn {
+    background-color: #e74c4c;
+}
+
+.form-section button.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+ /* update button style  */
+.form-section button.update-btn {
+    background-color: green;
+}
+
+.form-section button.update-btn:hover {
+    background-color: darkgreen;
+}
+
+/* create button style  */
+.form-section button.create-btn {
+    background-color: blue;
+}
+
+.form-section button.create-btn:hover {
+    background-color: darkblue;
+}
