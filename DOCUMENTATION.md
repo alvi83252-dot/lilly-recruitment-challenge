@@ -1,10 +1,18 @@
 # Lilly Technical Challenge - Documentation
 
 ## Approach
-*How did you approach this challenge? Did you work through the objectives in any particular order? If so, why? Did you utilize any external resources, such as tutorials, guides, or other materials?*
+My approach towards this challenge was to build a project in a structured, step-by-step way.
+I had began by creating a step-by-step guide and confirmed it with using AI to see if all steps were accounted for. I then began setting up the FastAPI backend, because having working endpoints first makes it easier to build and test the frontend afterward.
+
+I next connected the front-end to the back-end using 'fetch()' and displayed the /medicines endpoints dynamically on the page. Once the data displayed correctly, I improved the UI design, added responsiveness, and implemented form-based CRUD functions (Create/Read/Update/Delete).
+
+Throughout the process, I used documentation from FastAPI, MDN Web Docs, and general CSS grid references. However, all functionality and design were done manually by me without copying from any templates.
+
+I continuously kept track of my website by testing each step as I built it to ensure the system was stable before moving on.
 
 ## Objectives - Innovative Solutions
-*For the challenge objectives, did you do anything in a particular way that you want to discuss? Is there anything you're particularly proud of that you want to highlight? Did you attempt some objectives multiple times, or go back and re-write particular sections of code? If so, why? Use this space to document any key points you'd like to tell us about.*
+#Full CRUD Functionality CRUD endpoints:
+
 
 ## Problems Faced
 *Use this space to document and discuss any issues you faced while undertaking this challenge and how you solved them. We recommend doing this proactively as you experience and resolve the issues - make sure you don't forget! (Screenshots are helpful, though not required)*.
