@@ -29,6 +29,34 @@ body {
     height: 30px;
 }
 
+#searchBar {
+    width: 320px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.25s ease;
+    margin-bottom: 25px;
+    display: block;
+}
+
+#searchBar:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    transform: scale(1.02);
+}
+
+/* smooth hide animation for cards */
+#medicinesList > div {
+    transform: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#medicinesList > div.hide {
+    opacity: 0;
+    transform: scale(0.96);
+}
+
 /* ----My full responsive style for my web page that fits on all screen sizes---- */
 
  /* grid container for all medicine cards */

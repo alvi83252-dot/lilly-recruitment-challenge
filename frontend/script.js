@@ -120,6 +120,28 @@ async function fetchMedicines() {
     }
 }
 
+document.getElementById("searchBar").addEventListener("input", function() {
+        const query = this.value.toLowerCase();
+
+        // select all cards inside medicineList
+        const cards = document.querySelectorAll("#medicinesList > div");
+
+        cards.forEach(card => {
+            // get medicine name 
+            const nameElement = card.querySelector("h3");
+            const name = nameElement ? nameElement.textContent.toLowerCase() : "";
+
+            // show only matching cards
+            if (name.includes(query)) {
+                card.classList.remove("hide");
+                setTimeout(() => card.style.display = "block", 200);
+            } else {
+                card.classList.add("hide");
+                setTimeout(() => card.style.display = "none", 200);
+            }
+        });
+});
+
 // function to validate and clean and display medicines
 function CleanAndDisplayMedicines(medicines) {
     const cleanedMedicines = medicines.map(med => { // presents elements in a list while filter will filter out elements that meet the condition in the function
