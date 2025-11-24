@@ -81,7 +81,6 @@ The browser blocked requests until I added:
 Overall, I enjoyed the challenge and fekt that it had balanced design, back-end logic, and problem-solving very well. Completing CRUD, validation, data cleaning, and a bonus endpoint gave me a strong understanding of the entire workflow between the front-end and back-end.
 
 Some parts took longer than expected, especially debugging why data wasn't showing and adding validation rules. If I had more time, I would expand the project further with:
-- A search or filter bar
 - Pagination (Dividing large document or set of results into discrete, numbered pages for easier viewing and navigation)
 - Async JSON read/write for performance
 - A more sophisticated database such as SQLite or PostgreSQL
